@@ -101,21 +101,25 @@ To check your own drone missions:
 
 
 ### 3. Check for conflicts between missions:
-result = check_mission_safety(primary_mission, [other_flight1, other_flight2])
-print(f"Mission status: {result.status}")
+- 
+    ```
+    result = check_mission_safety(primary_mission, [other_flight1, other_flight2])
+    print(f"Mission status: {result.status}")
+    ```
 
-text
 
 ### 4. Visualize the results:
-visualizer = DeconflictionVisualizer()
-fig = visualizer.visualize_mission(
-primary_mission,
-[other_flight1, other_flight2],
-result.conflicts
-)
-plt.show()
+- 
+    ```
+    visualizer = DeconflictionVisualizer()
+    fig = visualizer.visualize_mission(
+        primary_mission,
+        [other_flight1, other_flight2],
+        result.conflicts
+    )
+    plt.show()
+    ```
 
-text
 
 ## Configuration Options
 
