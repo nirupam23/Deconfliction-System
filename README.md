@@ -68,7 +68,7 @@ Install the following Python packages:
 - `Conflict`: Details about a detected conflict (location, time, distance)
 - `ConflictResult`: Overall result of a safety check
 
-### AI-Assisted Drone Conflict Detection Workflow
+### AI-Assisted Drone Conflict Detection Workflow for Large Scale of Drones
 - `Model Training`:
     - Trains a Random Forest classifier on example data (`X_train`, `y_train`)
     - Uses simple features (e.g., minimum time and spatial differences) to distinguish between conflicting and non-conflicting drone pairs
@@ -84,21 +84,28 @@ Install the following Python packages:
 
 ### Core Services
 
-- `DeconflictionService`:  
+- **DeconflictionServic**`:  
     - Registers flights and checks for conflicts  
     - Initializes with safety parameters (minimum safe distance and time threshold)  
     - Interpolates drone trajectories for precise, time-stamped conflict checking  
     - Handles edge cases (single drone, no overlap, spatial/temporal overlap, etc.)  
     - Returns `"conflict detected"` with details or `"clear"` if safe
 
-- `Check Mission Safety`:  
+- **Check Mission Safety**:  
     - Simple interface function for conflict detection  
     - Sets up `DeconflictionService` with safety parameters  
     - Registers all other drone flights  
     - Checks if the new mission’s path and timing overlap dangerously with any existing flights  
     - Returns mission status and any detected conflicts
 
-- `DeconflictionVisualizer`:  
+- **Several Drone Conflict Scenario Generators**:
+    - `No Conflic`t: Drones are separated by space or time.
+    - `Spatial Conflict: Drones cross paths at the same location and altitude
+    - `Head-on, Vertical, Parallel, Multi-drone Intersection`: Different geometric conflict types.
+    - `Hovering Conflict`: One drone hovers at a point where another passes.
+    - `Temporal Overlap`: Drones share the same path but at different times.
+
+- **DeconflictionVisualizer**:  
     - Creates static and animated visualizations  
     - Provides 3D/2D plots of drone missions  
     - Animates drone movements and highlights conflicts  
