@@ -68,8 +68,9 @@ Install the following Python packages:
 - `ConflictResult`: Overall result of a safety check
 
 ### AI-Assisted Drone Conflict Detection Workflow
-- 'Model Training':
-    - Trains a Random Forest classifier on example data ('X_train', 'y_train')
+- `Model Training`:
+    - Trains a Random Forest classifier on example data (`X_train`, `y_train`)
+    - Uses simple features (e.g., minimum time and spatial differences) to distinguish between conflicting and non-conflicting drone pairs
   
 
 
