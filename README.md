@@ -176,7 +176,7 @@ To check your own drone missions:
     ```
 
 
-### 4. Create various Scenario and Visualize the results:
+### 4. Create various Conflict Scenario, Resolve Techniques and Visualize the results:
  -
     ```
     def create_example_scenario():
