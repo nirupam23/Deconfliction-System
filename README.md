@@ -176,9 +176,13 @@ To check your own drone missions:
     ```
 
 
-### 4. Visualize the results:
+### 4. Create various Scenario and Visualize the results:
  -
     ```
+    def create_example_scenario():
+         now = datetime.now()
+
+
     visualizer = DeconflictionVisualizer()
     fig = visualizer.visualize_mission(
         primary_mission,
