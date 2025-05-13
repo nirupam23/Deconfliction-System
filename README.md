@@ -22,7 +22,11 @@ The Drone Mission Deconfliction System is a comprehensive solution for detecting
 ### Required Packages
 
 Install the following Python packages:
--'pip install numpy matplotlib'
+-
+   '
+    pip install numpy matplotlib
+    
+    '
 
 
 ### Download the Notebook
@@ -72,7 +76,7 @@ Install the following Python packages:
     - Handles edge cases (single drone, no overlap, spatial/temporal overlap, etc.)  
     - Returns `"conflict detected"` with details or `"clear"` if safe
 
-- `check_mission_safety()`:  
+- `Check Mission Safety`:  
     - Simple interface function for conflict detection  
     - Sets up `DeconflictionService` with safety parameters  
     - Registers all other drone flights  
