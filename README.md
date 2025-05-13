@@ -84,17 +84,20 @@ To check your own drone missions:
     ```
 
 ### 2. Define flight plans with time windows:
-from datetime import datetime, timedelta
+-
+    '''
 
-now = datetime.now()
-flight_plan = DroneFlightPlan(
-drone_id="drone1",
-waypoints=waypoints,
-start_time=now,
-end_time=now + timedelta(minutes=10)
-)
+    from datetime import datetime, timedelta
 
-text
+    now = datetime.now()
+    flight_plan = DroneFlightPlan(
+    drone_id="drone1",
+    waypoints=waypoints,
+    start_time=now,
+    end_time=now + timedelta(minutes=10)
+    )
+    '''
+
 
 ### 3. Check for conflicts between missions:
 result = check_mission_safety(primary_mission, [other_flight1, other_flight2])
