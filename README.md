@@ -1,8 +1,9 @@
-Drone Mission Deconfliction System
-Overview
-The Drone Mission Deconfliction System is a comprehensive solution for detecting and visualizing potential conflicts between multiple drone flight paths in 3D space and time. This system helps ensure safe drone operations by identifying when and where drones might come too close to each other during their missions.
+**# Drone Mission Deconfliction System---
 
-Key Features
+**## OverviewThe Drone Mission Deconfliction System is a comprehensive solution for detecting and visualizing potential conflicts between multiple drone flight paths in 3D space and time. This system helps ensure safe drone operations by identifying when and where drones might come too close to each other during their missions.
+
+**## Keyeatures
+
 Spatiotemporal conflict detection between multiple drone flight plans
 
 3D visualization of drone trajectories and conflict points
@@ -13,8 +14,7 @@ Interactive 4D visualization with time slider for detailed analysis
 
 Configurable safety parameters (minimum safe distance and time threshold)
 
-Setup Instructions
-Prerequisites
+## Setup InstructionsPrerequisites**
 
 Python 3.8 or higher
 
@@ -29,8 +29,7 @@ Download the Notebook
 
 Download the Deconflication.ipynb file to your local machine
 
-Execution Instructions
-Open the Notebook
+## Execution InstructionsOpen the Notebook**
 
 Launch Jupyter Notebook or JupyterLab
 
@@ -60,8 +59,10 @@ Animations will be saved as MP4 files (requires ffmpeg)
 
 Interactive 4D visualizations can be explored within the notebook
 
-System Components
+**## Systemomponents
+
 Data Structures
+
 Waypoint: Represents a 3D point in space (x, y, z)
 
 DroneFlightPlan: Contains drone ID, waypoints, and time window
@@ -71,16 +72,16 @@ Conflict: Details about a detected conflict (location, time, distance)
 ConflictResult: Overall result of a safety check
 
 Core Services
+
 DeconflictionService: Registers flights and checks for conflicts
 
 check_mission_safety(): Simple interface function for conflict detection
 
 DeconflictionVisualizer: Creates static and animated visualizations
 
-Custom Usage
-To check your own drone missions:
+**## Custom UsageTo check your own drone missions:
 
-Create waypoints for each drone's path:
+1. Create waypoints for each drone's path:
 
 python
 waypoints = [
@@ -88,7 +89,7 @@ waypoints = [
     Waypoint(50, 50, 10),
     Waypoint(100, 0, 20)
 ]
-Define flight plans with time windows:
+2. Define flight plans with time windows:
 
 python
 from datetime import datetime, timedelta
@@ -100,19 +101,20 @@ flight_plan = DroneFlightPlan(
     start_time=now,
     end_time=now + timedelta(minutes=10)
 )
-Check for conflicts between missions:
+3. Check for conflicts between missions:
 
 python
 result = check_mission_safety(primary_mission, [other_flight1, other_flight2])
 print(f"Mission status: {result.status}")
-Visualize the results:
+4. Visualize the results:
 
 python
 visualizer = DeconflictionVisualizer()
 fig = visualizer.visualize_mission(primary_mission, [other_flight1, other_flight2], result.conflicts)
 plt.show()
-Configuration Options
-Adjust safety parameters in the check_mission_safety() function:
+**## Configurationptions
+
+Safety parameters in check_mission_safety():
 
 safety_buffer: Minimum safe distance between drones in meters (default: 10.0)
 
@@ -124,7 +126,8 @@ is_3d: Set to True for 3D visualizations, False for 2D (default: True)
 
 fps and duration: Control animation speed and length
 
-Example Output
+**## Exampleutput
+
 When running the example scenarios, you'll see:
 
 Conflict detection results in the console
@@ -134,3 +137,22 @@ Static visualizations of flight paths with conflict points highlighted
 Animations showing drone movements over time
 
 Interactive 4D visualizations with time slider control
+
+Example for customizing visualization settings:
+
+python
+visualizer = DeconflictionVisualizer()
+visualizer.visualize_mission(
+    primary_mission, 
+    [other_flight1, other_flight2], 
+    result.conflicts,
+    is_3d=True,
+    fps=30,
+    duration=10
+)
+
+
+
+
+
+    
