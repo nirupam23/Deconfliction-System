@@ -71,9 +71,15 @@ Install the following Python packages:
 - `Model Training`:
     - Trains a Random Forest classifier on example data (`X_train`, `y_train`)
     - Uses simple features (e.g., minimum time and spatial differences) to distinguish between conflicting and non-conflicting drone pairs
-  
-
-
+- `Feature Extraction`:
+    - The extract_features function computes basic features from each drone pair
+    - Placeholders are used in the example; should be replaced with actual calculations relevant to your data
+- `Pre-Filtering`:
+    - `ai_prefilter_deconfliction` function streamlines conflict checks
+    -  Extracts features for each drone pair
+    -  Uses the AI model to predict if a conflict is likely
+    -  Runs the detailed check_conflict function only for pairs flagged as likely conflict
+    -  Collects and returns the actual conflicts 
 
 ### Core Services
 
