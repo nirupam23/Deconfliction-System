@@ -22,9 +22,8 @@ The Drone Mission Deconfliction System is a comprehensive solution for detecting
 ### Required Packages
 
 Install the following Python packages:
-pip install numpy matplotlib
+-'pip install numpy matplotlib'
 
-text
 
 ### Download the Notebook
 
