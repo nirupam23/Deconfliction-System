@@ -74,13 +74,14 @@ Install the following Python packages:
 To check your own drone missions:
 
 ### 1. Create waypoints for each drone's path:
-waypoints = [
-Waypoint(0, 0, 0),
-Waypoint(50, 50, 10),
-Waypoint(100, 0, 20)
-]
-
-text
+- 
+    ```
+    waypoints = [
+        Waypoint(0, 0, 0),
+        Waypoint(50, 50, 10),
+        Waypoint(100, 0, 20)
+    ]
+    ```
 
 ### 2. Define flight plans with time windows:
 from datetime import datetime, timedelta
