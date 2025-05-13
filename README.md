@@ -26,6 +26,7 @@ Install the following Python packages:
 -
     ```
     pip install numpy matplotlib
+    pip install scikit-learn
     ```
 
 
