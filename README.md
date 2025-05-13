@@ -67,6 +67,8 @@ Install the following Python packages:
 - `Conflict`: Details about a detected conflict (location, time, distance)
 - `ConflictResult`: Overall result of a safety check
 
+### AI-Assisted Drone Conflict Detection Workflow
+
 ### Core Services
 
 - `DeconflictionService`:  
