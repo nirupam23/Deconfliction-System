@@ -98,7 +98,7 @@ Install the following Python packages:
     - Checks if the new mission’s path and timing overlap dangerously with any existing flights  
     - Returns mission status and any detected conflicts
 
-- **Several Drone Conflict Scenario Generators**:
+- **Several Drone Conflict Scenario Generators and their Solutions**:
     - `No Conflict`: Drones are separated by space or time.
     - `Spatial Conflict`: Drones cross paths at the same location and altitude
     - `Head-on, Vertical, Parallel, Multi-drone Intersection`: Different geometric conflict types.
