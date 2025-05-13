@@ -134,7 +134,7 @@ To check your own drone missions:
     )
     ```
     
-### 3. Pre-Filtering Deconfliction
+### 3. AI-Assisted Deconfliction
 
 - 
     ```
@@ -157,10 +157,6 @@ To check your own drone missions:
             if check_conflict(pair):  # original detailed check
                 conflicts.append(pair)
     return conflicts
-
- 
-    
-  
     ```
 
 
