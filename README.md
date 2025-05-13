@@ -110,7 +110,7 @@ Install the following Python packages:
 To check your own drone missions:
 
 ### 1. Create waypoints for each drone's path:
-- 
+ 
     ```
     waypoints = [
         Waypoint(0, 0, 0),
@@ -121,7 +121,7 @@ To check your own drone missions:
 
 ### 2. Define flight plans with time windows
 
-- 
+ 
     ```
     from datetime import datetime, timedelta
 
@@ -136,7 +136,7 @@ To check your own drone missions:
     
 ### 3. AI-Assisted Deconfliction
 
-- 
+ 
     ```
     model = RandomForestClassifier(n_estimators=10, random_state=42)
     model.fit(X_train, y_train)
@@ -161,7 +161,7 @@ To check your own drone missions:
 
 
 ### 3. Check for conflicts between missions:
-- 
+ 
     ```
     result = check_mission_safety(primary_mission, [other_flight1, other_flight2])
     print(f"Mission status: {result.status}")
@@ -169,7 +169,7 @@ To check your own drone missions:
 
 
 ### 4. Visualize the results:
-- 
+
     ```
     visualizer = DeconflictionVisualizer()
     fig = visualizer.visualize_mission(
