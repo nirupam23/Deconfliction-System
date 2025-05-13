@@ -84,7 +84,7 @@ Install the following Python packages:
 
 ### Core Services
 
-- **DeconflictionServic**`:  
+- **DeconflictionServic**:  
     - Registers flights and checks for conflicts  
     - Initializes with safety parameters (minimum safe distance and time threshold)  
     - Interpolates drone trajectories for precise, time-stamped conflict checking  
@@ -99,8 +99,8 @@ Install the following Python packages:
     - Returns mission status and any detected conflicts
 
 - **Several Drone Conflict Scenario Generators**:
-    - `No Conflic`t: Drones are separated by space or time.
-    - `Spatial Conflict: Drones cross paths at the same location and altitude
+    - `No Conflict`: Drones are separated by space or time.
+    - `Spatial Conflict`: Drones cross paths at the same location and altitude
     - `Head-on, Vertical, Parallel, Multi-drone Intersection`: Different geometric conflict types.
     - `Hovering Conflict`: One drone hovers at a point where another passes.
     - `Temporal Overlap`: Drones share the same path but at different times.
