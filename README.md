@@ -65,9 +65,27 @@ Install the following Python packages:
 
 ### Core Services
 
-- `DeconflictionService`: Registers flights and checks for conflicts
-- `check_mission_safety()`: Simple interface function for conflict detection
-- `DeconflictionVisualizer`: Creates static and animated visualizations
+- `DeconflictionService`:  
+    - Registers flights and checks for conflicts  
+    - Initializes with safety parameters (minimum safe distance and time threshold)  
+    - Interpolates drone trajectories for precise, time-stamped conflict checking  
+    - Handles edge cases (single drone, no overlap, spatial/temporal overlap, etc.)  
+    - Returns `"conflict detected"` with details or `"clear"` if safe
+
+- `check_mission_safety()`:  
+    - Simple interface function for conflict detection  
+    - Sets up `DeconflictionService` with safety parameters  
+    - Registers all other drone flights  
+    - Checks if the new mission’s path and timing overlap dangerously with any existing flights  
+    - Returns mission status and any detected conflicts
+
+- `DeconflictionVisualizer`:  
+    - Creates static and animated visualizations  
+    - Provides 3D/2D plots of drone missions  
+    - Animates drone movements and highlights conflicts  
+    - Offers an interactive slider to explore drone positions over time  
+    - Clearly marks conflict points and provides visual/text alerts
+
 
 ## Custom Usage
 
