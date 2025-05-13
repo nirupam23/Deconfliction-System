@@ -133,7 +133,35 @@ To check your own drone missions:
         end_time=now + timedelta(minutes=10)
     )
     ```
+    
+### 3. Pre-Filtering Deconfliction
 
+- 
+    ```
+    model = RandomForestClassifier(n_estimators=10, random_state=42)
+    model.fit(X_train, y_train)
+
+
+    def extract_features(pair):
+        min_time_diff = 2  # placeholder
+        min_spatial_dist = 7  # placeholder
+        return np.array([[min_time_diff, min_spatial_dist]])
+
+
+    def ai_prefilter_deconfliction(pairs):
+    conflicts = []
+    for pair in pairs:
+        features = extract_features(pair)
+        prediction = model.predict(features)
+        if prediction == 1:  # likely conflict
+            if check_conflict(pair):  # original detailed check
+                conflicts.append(pair)
+    return conflicts
+
+ 
+    
+  
+    ```
 
 
 ### 3. Check for conflicts between missions:
