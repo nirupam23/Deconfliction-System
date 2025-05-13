@@ -68,6 +68,11 @@ Install the following Python packages:
 - `ConflictResult`: Overall result of a safety check
 
 ### AI-Assisted Drone Conflict Detection Workflow
+- 'Model Training':
+    - Trains a Random Forest classifier on example data ('X_train', 'y_train')
+  
+
+
 
 ### Core Services
 
